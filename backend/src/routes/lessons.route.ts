@@ -32,7 +32,7 @@ router.get('/:id/:startDate/:endDate', checkCookie, async (req: Request, res: Re
       formattedEndDate = endDate.toISOString().substring(0, 10)
     }
     
-    const response = await fetch(`${process.env.SERVER_URL}/students/${id}/lessons/${formattedStartDate}/${formattedEndDate}`, {
+    const response = await fetch(`https://poo.tomedu.ru/services/students/${id}/lessons/${formattedStartDate}/${formattedEndDate}`, {
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         Cookie: secret

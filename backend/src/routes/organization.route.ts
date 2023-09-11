@@ -8,7 +8,7 @@ router.get('/', [checkCookie], async (req: Request, res: Response) => {
   try {
     const secret = req.headers.secret as string
     
-    const response = await fetch(`${process.env.SERVER_URL}/people/organization`, {
+    const response = await fetch(`https://poo.tomedu.ru/services/people/organization`, {
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         Cookie: secret

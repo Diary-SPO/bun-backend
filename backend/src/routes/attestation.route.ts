@@ -9,7 +9,7 @@ router.get('/:id', [checkCookie, checkId], async (req: Request, res: Response) =
     const secret = req.headers.secret as string
     const { id } = req.params
     
-    const response = await fetch(`${process.env.SERVER_URL}/reports/curator/group-attestation-for-student/${id}`, {
+    const response = await fetch(`https://poo.tomedu.ru/services/reports/curator/group-attestation-for-student/${id}`, {
       headers: {
         'Content-Type': 'application/json;charset=UTF-8',
         Cookie: secret

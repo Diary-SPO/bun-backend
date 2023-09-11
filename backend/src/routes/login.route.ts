@@ -13,7 +13,7 @@ router.post('/', async (req: Request, res: Response) => {
   }
 
   try {
-    const response = await fetch(`${process.env.SERVER_URL}/security/login`, {
+    const response = await fetch(`https://poo.tomedu.ru/services/security/login`, {
       method: "POST",
       body: JSON.stringify({ login, password, isRemember: true }),
       headers: { 'Content-Type': 'application/json;charset=UTF-8' },
