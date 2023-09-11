@@ -4,7 +4,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import { corsMiddleware, preventCrossSiteScripting } from './src/middleware'
 import {
-  attestation, helloRoute, lessonsRoute, loginRoute, organization, performanceCurrent
+  attestation, helloRoute, lessonsRoute, loginRoute, organization, performanceCurrent, adsRoute
 } from './src/routes'
 
 const app = express()
@@ -38,6 +38,7 @@ app.use('/attestation', attestation)
 app.use('/organization', organization)
 app.use('/lessons', lessonsRoute)
 app.use('/login', loginRoute)
+app.use('/ads', adsRoute)
 app.use('/', helloRoute)
 
 app.listen(port, () => {

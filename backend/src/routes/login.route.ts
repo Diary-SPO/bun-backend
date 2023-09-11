@@ -27,7 +27,6 @@ router.post('/', async (req: Request, res: Response) => {
     return res.status(response.status).json({ data, cookie: cookieString })
   } catch (error) {
     if (error instanceof Error) {
-
       if (error.message) {
         return res.status(500).json(error.message)
       } else {
